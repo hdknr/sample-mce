@@ -1,10 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+  <title>{% block title %}Blogs{% endblock %}</title>
+  {% block head %}
+    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+  {% endblock %}
 </head>
 
 <body>
+
+  <div class="content">
   {% block content %}
+  {% endblock %}
+  </div>
+
+  {% block bottom %}
+    <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
   {% endblock %}
 </body>
 </html>

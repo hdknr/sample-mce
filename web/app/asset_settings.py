@@ -19,5 +19,7 @@ BOOTSTRAP3 = {
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components/')
 # BOWER_PATH = '/usr/bin/bower'
 BOWER_INSTALLED_APPS = [
+    'jquery',
     'tinymce',          # latest TinyMCE
+    'bootstrap',
 ]
