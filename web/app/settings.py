@@ -103,10 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_L10N = True
@@ -119,9 +115,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+LANGUAGE_CODE = 'ja'
+TIME_ZONE = 'Asia/Tokyo'
 INSTALLED_APPS += [
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'tinymce',
 ]
 ALLOWED_HOSTS = ['develop.local', ]
 SITE_ID = 1
+
+try:
+    from .asset_settings import *        # NOQA
+    INSTALLED_APPS += ASSET_APPS
+except:
+    pass
