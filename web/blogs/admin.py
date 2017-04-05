@@ -6,6 +6,8 @@ from django.contrib.flatpages.admin import FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
 from tinymce.widgets import TinyMCE
 
+from . import models
+
 
 class TinyMCEFlatPageAdmin(FlatPageAdmin):
     def formfield_for_dbfield(self, db_field, **kwargs):
@@ -22,3 +24,8 @@ class TinyMCEFlatPageAdmin(FlatPageAdmin):
 #
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, TinyMCEFlatPageAdmin)
+
+
+@admin.register(models.Entry)
+class EntryAdmin(admin.ModelAdmin):
+    list_display = ['id', 'subject', ]

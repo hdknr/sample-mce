@@ -21,5 +21,6 @@ from django.contrib.flatpages import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^blogs/', include('blogs.urls')),
     url(r'^(?P<url>.*/)$', views.flatpage),
 ]

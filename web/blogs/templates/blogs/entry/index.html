@@ -1,0 +1,10 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+<a href="{% url 'blogs_entry_add' %}">New</a>
+<ul>
+{% for instance in instances %}
+  <li><a href="{{ instance.get_absolute_url }}">{{ instance.subject }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

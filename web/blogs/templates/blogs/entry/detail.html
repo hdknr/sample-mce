@@ -1,0 +1,9 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+{{ instance.subject}}
+<hr>
+{{ instance.text|safe }}
+
+<a href="{% url 'blogs_entry_index' %}">All</a>
+{% endblock %}
