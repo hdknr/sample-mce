@@ -122,6 +122,10 @@ INSTALLED_APPS += [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'tinymce',
+    'blogs',            # sample
+]
+MIDDLEWARE += [
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 ALLOWED_HOSTS = ['develop.local', ]
 SITE_ID = 1
