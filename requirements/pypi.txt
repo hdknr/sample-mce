@@ -1,0 +1,11 @@
+# TinyMCE
+django-tinymce
+
+# Framework
+django
+pytz
+
+# UI
+bambu-bootstrap
+django-bootstrap3
+django-bower
