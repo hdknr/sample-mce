@@ -123,3 +123,5 @@ INSTALLED_APPS += [
     'django.contrib.sites',
     'django.contrib.flatpages',
 ]
+ALLOWED_HOSTS = ['develop.local', ]
+SITE_ID = 1
