@@ -131,7 +131,10 @@ ALLOWED_HOSTS = ['develop.local', ]
 SITE_ID = 1
 
 try:
+    from django.conf import global_settings
     from .asset_settings import *        # NOQA
     INSTALLED_APPS += ASSET_APPS
+    STATICFILES_FINDERS = global_settings.STATICFILES_FINDERS \
+        + ASSET_STATICFILES_FINDERS
 except:
     pass

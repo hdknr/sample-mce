@@ -7,6 +7,7 @@ ASSET_APPS = [
     'djangobower',              # django-bower
     'bambu_bootstrap',          # bambu
 ]
+ASSET_STATICFILES_FINDERS = ['djangobower.finders.BowerFinder', ]
 
 BOOTSTRAP3 = {
     'field_renderers': {
