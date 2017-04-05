@@ -21,5 +21,6 @@ BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components/')
 BOWER_INSTALLED_APPS = [
     'jquery',
     'tinymce',          # latest TinyMCE
+    'tinymce-i18n',     # https://github.com/OpenSlides/tinymce-i18n
     'bootstrap',
 ]

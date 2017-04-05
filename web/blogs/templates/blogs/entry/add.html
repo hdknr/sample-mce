@@ -6,6 +6,7 @@ https://www.tinymce.com/docs/get-started/work-with-plugins/
 
 {% block bottom %} {{ block.super }}
  <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
+ <script src="{% static 'tinymce-i18n/langs/ja.js' %}"></script>
  <script type="text/javascript">
  tinymce.init({
    selector: '#{{ form.text.auto_id }}',
